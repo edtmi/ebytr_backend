@@ -68,7 +68,6 @@
     "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/object-curly-spacing": ["error", "always"],
     "@typescript-eslint/space-infix-ops": ["error"],
-    "@typescript-eslint/semi": ["error"],
-    "@typescript-eslint/space-before-function-paren": ["error", "never"]
+    "@typescript-eslint/semi": ["error"]
   }
 }
