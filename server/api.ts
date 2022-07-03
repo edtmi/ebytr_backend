@@ -1,6 +1,6 @@
 import express from 'express';
 import createConnection from '../src/models/connection';
-import taskRoutes from '../src/routes/taskRoutes';
+import route from '../src/routes/index';
 
 class App {
   public express: express.Express;
@@ -18,7 +18,7 @@ class App {
   }
 
   private router = () => {
-    this.express.use(taskRoutes);
+    this.express.use(route);
   };
 }
 
