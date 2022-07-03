@@ -2,9 +2,9 @@ import { Schema } from 'mongoose';
 import ITask from '../interfaces/taskInterface';
 
 const taskSchema = new Schema<ITask>({
-  task: { type: String },
-  date: { type: Date },
-  status: { type: String },
+  descriptionTask: { type: String },
+  dateCreated: { type: Date },
+  statusTask: { type: String },
 }, { versionKey: false });
 
 export default taskSchema;

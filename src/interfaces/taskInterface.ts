@@ -1,7 +1,7 @@
 interface ITask {
-  task: string,
-  date: Date,
-  status: string,
+  descriptionTask: string,
+  dateCreated: Date,
+  statusTask: string,
 }
 
 export default ITask;
