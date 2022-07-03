@@ -6,8 +6,8 @@
   "scripts": {
     "db:reset": "npx -y tsc && npx sequelize-cli db:drop && npx sequelize-cli db:create",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node server/index.ts",
-    "dev": "nodemon server/index.ts"
+    "start": "ts-node src/server/index.ts",
+    "dev": "nodemon src/server/index.ts"
   },
   "repository": {
     "type": "git",
