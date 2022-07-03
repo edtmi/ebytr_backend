@@ -17,6 +17,7 @@
   ],
   "rules": {
     "complexity": ["error", 5],
+    "eol-last": ["error", "always"],
     "no-console": "off",
     "no-constant-condition": "off",
     "no-multi-spaces": "error",
@@ -49,10 +50,25 @@
         "max": 20
       }
     ],
+    "semi-style": ["error", "last"],
+    "space-in-parens": ["error", "never"],
+    "@typescript-eslint/type-annotation-spacing": [
+      "error",
+      {
+        "after": true,
+        "before": false
+      }
+    ],
     "@typescript-eslint/indent": [
       "error",
       2
     ],
-    "@typescript-eslint/no-var-requires": "off"
+    "@typescript-eslint/func-call-spacing": ["error", "never"],
+    "@typescript-eslint/keyword-spacing": ["error"],
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/object-curly-spacing": ["error", "always"],
+    "@typescript-eslint/space-infix-ops": ["error"],
+    "@typescript-eslint/semi": ["error"],
+    "@typescript-eslint/space-before-function-paren": ["error", "never"]
   }
 }
