@@ -1,11 +1,11 @@
-import TaskModel from '../models/TaskModel';
-import ITask from '../interfaces/taskInterface';
+import TaskModel from '../database/models/TaskModel';
 
 class TaskService {
-  constructor(private model = new TaskModel()) {}
-
-  public createTask = async (task: ITask): Promise<ITask> => {
-    const taskCreated = await this.model.createTask(task);
+  public createTask = async (
+    descriptionTask: string,
+    statusTask: string,
+  ): Promise<TaskModel> => {
+    const taskCreated = await TaskModel.create({ descriptionTask, statusTask });
 
     return taskCreated;
   };
