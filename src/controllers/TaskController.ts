@@ -10,6 +10,12 @@ class TaskController {
 
     return res.status(201).json(taskCreated);
   };
+
+  public listAllTasks = async(_req: Request, res: Response) => {
+    const arrTasks = await this.service.listAllTasks();
+
+    return res.status(200).json(arrTasks);
+  };
 }
 
 export default TaskController;
