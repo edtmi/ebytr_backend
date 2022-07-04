@@ -9,6 +9,12 @@ class TaskService {
 
     return taskCreated;
   };
+
+  public listAllTasks = async (): Promise<TaskModel[]> => {
+    const getAllTasks = await TaskModel.findAll();
+
+    return getAllTasks;
+  };
 }
 
 export default TaskService;
