@@ -15,6 +15,18 @@ class TaskService {
 
     return getAllTasks;
   };
+
+  public updateTask = async (
+    id: string,
+    descriptionTask: string,
+    statusTask: string,
+  ): Promise<TaskModel> => {
+    const taskExist = await TaskModel.findOne({ where: { id } });
+
+    if (!taskExist) throw new Error('Task not found');
+
+    return await taskExist.update({ descriptionTask, statusTask });
+  };
 }
 
 export default TaskService;
