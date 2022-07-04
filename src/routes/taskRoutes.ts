@@ -9,4 +9,7 @@ taskRoute.route('/')
   .post(taskController.createTask)
   .get(taskController.listAllTasks);
 
+taskRoute.route('/:id')
+  .put(taskController.updateTask);
+
 export default taskRoute;
