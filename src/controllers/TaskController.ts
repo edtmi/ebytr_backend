@@ -16,6 +16,14 @@ class TaskController {
 
     return res.status(200).json(arrTasks);
   };
+
+  public updateTask = async(req: Request, res: Response) => {
+    const { id } = req.params;
+    const { descriptionTask, statusTask } = req.body;
+    const taskUpdated = await this.service.updateTask(id, descriptionTask, statusTask);
+
+    return res.status(201).json(taskUpdated);
+  };
 }
 
 export default TaskController;
